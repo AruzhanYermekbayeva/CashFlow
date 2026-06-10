@@ -1,16 +1,51 @@
-# cashflow
+# CashFlow — Personal Finance App
 
-A new Flutter project.
+Mobile app for tracking personal finances. Built with Flutter, works fully offline with local storage.
+
+## Features
+
+- **Transactions** — add and delete income/expense entries
+- **Budget** — set spending limits by category
+- **Goals** — create savings goals and track progress
+- **Reports** — visualize spending with charts
+- **Profile** — personal settings
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | Flutter (Dart) |
+| State management | Provider |
+| Local database | SQLite (sqflite) |
+| Charts | fl_chart |
+| Font | Montserrat |
+
+## Project Structure
+
+```
+lib/
+├── main.dart                  # App entry point, navigation
+├── provider.dart              # Global state (TransactionProvider)
+├── transactions_page.dart     # Income/expense tracking
+├── budget_page.dart           # Budget management
+├── goals_page.dart            # Savings goals
+├── reports_page.dart          # Charts and statistics
+├── profile_page.dart          # User profile
+├── helper/
+│   └── db_helper.dart         # SQLite CRUD operations
+└── models/
+    ├── transactions_model.dart
+    ├── budget_model.dart
+    └── goals_model.dart
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```bash
+git clone https://github.com/AruzhanYermekbayeva/cashflow.git
+cd cashflow
+flutter pub get
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Requires Flutter SDK 3.7+. No API keys or environment variables needed — all data is stored locally on device.
